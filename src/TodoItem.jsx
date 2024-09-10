@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { deleteTodo, editTodo } from "./store/todoSlice";
 import { useDispatch } from "react-redux";
 import { Button } from "@chakra-ui/react";
+import { memo } from "react";
 
 function TodoItem({ value, id }) {
   const dispatch = useDispatch();
@@ -44,4 +45,4 @@ TodoItem.propTypes = {
   id: PropTypes.string,
 };
 
-export default TodoItem;
+export default memo(TodoItem);
